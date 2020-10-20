@@ -14,13 +14,11 @@ public class testMathClass {
             Scanner b = new Scanner(System.in);
             System.out.print("Enter the second number : ");
             int y = b.nextInt();
-
             Scanner s = new Scanner(System.in);
 
             while(true)
             {
                 System.out.println(" ");
-
                 System.out.println("Choose the operation you want to perform ");
                 System.out.println("Choose 1 for ADDITION");
                 System.out.println("Choose 2 for SUBTRACTION");
