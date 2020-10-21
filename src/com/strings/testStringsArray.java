@@ -6,31 +6,27 @@ import java.io.InputStreamReader;
 
 public class testStringsArray {
 
+    public static void main(String[] args) throws IOException {
 
-        public static void main(String[] args) throws IOException {
-
+        try {
             BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-
-
             double sum = 0;
-
             System.out.println("Enter the number of strings: ");
-
             int numberOfStrings = Integer.parseInt(reader.readLine());
-
             String[] arrayOfStrings = new String[numberOfStrings];
-
-
-            for (int i=0;i<numberOfStrings;i++) {
-                System.out.println("Enter the value for the " + (i+1) + "string: ");
+            for (int i = 0; i < numberOfStrings; i++) {
+                System.out.println("Enter the value for the " + (i + 1) + "string: ");
                 arrayOfStrings[i] = reader.readLine();
-
             }
-
-            for (int i=0;i<numberOfStrings;i++){
+            for (int i = 0; i < numberOfStrings; i++) {
                 sum += arrayOfStrings[i].length();
             }
-            System.out.println("Average length of the string in array: " + (sum/numberOfStrings));
+
+            System.out.println("Average length of the string in array: " + (sum / numberOfStrings));
+
+        } catch (NumberFormatException exception) {
+            System.out.println("Invalid value of strings entered");
         }
     }
+}
 
